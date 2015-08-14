@@ -10,7 +10,7 @@ import static spark.Spark.*;
 
 
 public class WordPuzzle {
-  /*public static void main(String[] args){
+  public static void main(String[] args){
     staticFileLocation("/public");
     String layout = "templates/layout.vtl";
 
@@ -31,13 +31,16 @@ public class WordPuzzle {
       //replaces "$result" on the /results page with output:
       model.put("result", output);
       return new ModelAndView(model,layout);
-    }, new VelocityTemplateEngine());*/
+    }, new VelocityTemplateEngine());
   }
 
-  public static void makeWordPuzzle(String userInput){
+  public static String makeWordPuzzle(String userInput){
 
-    String staticUserInput = "let the people ride bikes!";
-    String[] userInputArray = staticUserInput.split("");
+//cheater version using .replaceAll();
+    //String staticUserInput = "let the people ride bikes!";
+    String encryptedUserInput = userInput.replaceAll("a", "-").replaceAll("e","-").replaceAll("i", "-").replaceAll("o", "-").replaceAll("u","-");
+
+    /*String[] userInputArray = staticUserInput.split("");
 
     HashMap <String, String> vowels = new HashMap <String, String>();
       vowels.put("a", "-");
@@ -50,7 +53,7 @@ public class WordPuzzle {
       String encryptedLetters = vowels.get(letter);
       //String[] encryptedUserInputArray = userInputArray(vowels.get(letter));
       System.out.println(encryptedLetters);
-    }
+    }*/
 
 /*
 x User inputs a String
@@ -60,7 +63,7 @@ x Replaces vowels with -
 ??? Returns new string
 
 */
-
+    return encryptedUserInput;
   }
 
 }
