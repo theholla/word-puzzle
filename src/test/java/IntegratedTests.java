@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class IntegratedTest extends FluentTest {
+public class IntegratedTests extends FluentTest {
   public WebDriver webDriver = new HtmlUnitDriver();
   public WebDriver getDefaultDriver() {
     return webDriver;
@@ -13,7 +13,7 @@ public class IntegratedTest extends FluentTest {
 
   @ClassRule
   public static ServerRule server = new ServerRule();
-
+/*
   @Test
   public void rootTest() {
     goTo("http://localhost:4567/");
@@ -26,5 +26,5 @@ public class IntegratedTest extends FluentTest {
     fill("#userinput").with("input example");
     submit(".btn");
     assertThat(pageSource()).contains("Words that should appear on results page given the input");
-  }
+  }*/
 }

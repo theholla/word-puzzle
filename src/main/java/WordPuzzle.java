@@ -9,20 +9,16 @@ import static spark.Spark.*;
 public class WordPuzzle {
   public static void main(String[] args){
 
-    // Spark Forms magic
+  /*  staticFileLocation("/public");
+    String layout = "templates/layout.vtl";
 
-    staticFileLocation("/public");
-    String layout = "templates/layout.vtl"; //locates layout file
-
-    // Makes homepage "http://localhost:4567/",  will search for file in public/templates/form.vtl
-    get("/", (request, response) -> {
+    get("/", (request, response) -> { //makes homepage http://localhost:4567/
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/form.vtl");
       return new ModelAndView(model, "templates/layout.vtl");
     }, new VelocityTemplateEngine());
 
-    //Makes a results page
-    get ("/results", (request,response) -> {
+    get ("/results", (request,response) -> { //makes a results page from a template
       Map<String, Object> model = new HashMap<String,Object>();
       model.put("template", "templates/results.vtl");
 
@@ -34,9 +30,11 @@ public class WordPuzzle {
       //replaces "$result" on the /results page with output:
       model.put("result", output);
       return new ModelAndView(model,layout);
-      }, new VelocityTemplateEngine());
+    }, new VelocityTemplateEngine()); */
 
   }
 
-  //New Method {}
+  public static void makeWordPuzzle(String userInput){
+  }
+
 }

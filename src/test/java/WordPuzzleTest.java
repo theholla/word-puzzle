@@ -1,8 +1,29 @@
 import org.junit.*;
-//import org.fluentlenium.adapter.FluentTest;
 import org.junit.ClassRule;
 import org.junit.Test;
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import static org.junit.Assert.*;
 import spark.template.velocity.VelocityTemplateEngine;
+
+public class WordPuzzleTest {
+  public static void main(String[] args) {}
+
+  @Test
+  public void wordPuzzle_ReplaceAllVowels_AllVowelsBecomeDashes() {
+    WordPuzzle testWordPuzzle = new WordPuzzle();
+    String testResult = "-ppl-";
+    assertEquals(testResult, testWordPuzzle.makeWordPuzzle(""));
+  }
+
+    //@Test
+
+}
+
+/*
+Behavior                                Input       Output
+
+Replaces vowels in a string wth -       apple       -ppl-
+Leaves spaces as is                     the dog     th- d-g
+Handles non alpha characters            fsho!!#!    fsh-!!#!
+Handles blank entries                               Please type a sentence
+
+*/
