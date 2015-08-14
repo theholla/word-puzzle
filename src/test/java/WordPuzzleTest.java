@@ -11,7 +11,7 @@ public class WordPuzzleTest {
   public void wordPuzzle_ReplaceAllVowels_AllVowelsBecomeDashes() {
     WordPuzzle testWordPuzzle = new WordPuzzle();
     String testResult = "-ppl-";
-    assertEquals(testResult, testWordPuzzle.makeWordPuzzle(""));
+    assertEquals(testResult, testWordPuzzle.makeWordPuzzle("apple"));
   }
 
     //@Test
@@ -19,11 +19,12 @@ public class WordPuzzleTest {
 }
 
 /*
-Behavior                                Input       Output
+Behavior                                 Input           Output
 
-Replaces vowels in a string wth -       apple       -ppl-
-Leaves spaces as is                     the dog     th- d-g
-Handles non alpha characters            fsho!!#!    fsh-!!#!
-Handles blank entries                               Please type a sentence
+Replaces vowels in a string wth -        apple           -ppl-
+Understands upper/lowercase              Apple           -ppl-
+Leaves spaces as is                      the dog         th- d-g
+Handles non alpha characters             fsho!!#!        fsh-!!#!
+Responds to blank entries                                Please type a sentence
 
 */

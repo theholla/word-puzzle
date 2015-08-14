@@ -13,18 +13,18 @@ public class IntegratedTests extends FluentTest {
 
   @ClassRule
   public static ServerRule server = new ServerRule();
-/*
+
   @Test
   public void rootTest() {
     goTo("http://localhost:4567/");
-    assertThat(pageSource()).contains("Words that should appear on home page");
+    assertThat(pageSource()).contains("Please type a sentence to be");
   }
 
   @Test
-  public void changeIsQuarters(){
+  public void wordPuzzle_makeStringCryptic_containsDashes(){
     goTo("http://localhost:4567");
-    fill("#userinput").with("input example");
+    fill("#userinput").with("Let's ride bikes!");
     submit(".btn");
-    assertThat(pageSource()).contains("Words that should appear on results page given the input");
-  }*/
+    assertThat(pageSource()).contains("L-t's r-d- b-k-s!");
+  }
 }
