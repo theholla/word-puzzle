@@ -14,7 +14,12 @@ public class WordPuzzleTest {
     assertEquals(testResult, testWordPuzzle.makeWordPuzzle("apple"));
   }
 
-    //@Test
+  @Test
+  public void wordPuzzle_ReplaceAllVowels_UnderstandsCase() {
+    WordPuzzle testWordPuzzle = new WordPuzzle();
+    String testResult = "-ppl-";
+    assertEquals(testResult, testWordPuzzle.makeWordPuzzle("Apple"));
+  }
 
 }
 
