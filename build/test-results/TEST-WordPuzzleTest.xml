@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="WordPuzzleTest" tests="2" skipped="0" failures="1" errors="0" timestamp="2015-08-14T22:59:13" hostname="Admins-MacBook-Pro.local" time="0.005">
+<testsuite name="WordPuzzleTest" tests="2" skipped="0" failures="1" errors="0" timestamp="2015-08-14T23:29:57" hostname="Admins-MacBook-Pro.local" time="0.003">
   <properties/>
-  <testcase name="wordPuzzle_ReplaceAllVowels_AllVowelsBecomeDashes" classname="WordPuzzleTest" time="0.0"/>
-  <testcase name="wordPuzzle_ReplaceAllVowels_UnderstandsCase" classname="WordPuzzleTest" time="0.004">
+  <testcase name="wordPuzzle_ReplaceAllVowels_AllVowelsBecomeDashes" classname="WordPuzzleTest" time="0.001"/>
+  <testcase name="wordPuzzle_ReplaceAllVowels_UnderstandsCase" classname="WordPuzzleTest" time="0.001">
     <failure message="org.junit.ComparisonFailure: expected:&lt;[-]ppl-&gt; but was:&lt;[A]ppl-&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[-]ppl-&gt; but was:&lt;[A]ppl-&gt;
 	at org.junit.Assert.assertEquals(Assert.java:115)
 	at org.junit.Assert.assertEquals(Assert.java:144)

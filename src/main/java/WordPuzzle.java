@@ -3,7 +3,14 @@ import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Arrays;
+
+//imports needed to remove unwanted characters
+import java.util.ArrayList;
 import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.StringTokenizer;
+
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
@@ -36,34 +43,18 @@ public class WordPuzzle {
 
   public static String makeWordPuzzle(String userInput){
 
-//cheater version using .replaceAll();
-    //String staticUserInput = "let the people ride bikes!";
-    String encryptedUserInput = userInput.replaceAll("a", "-").replaceAll("e","-").replaceAll("i", "-").replaceAll("o", "-").replaceAll("u","-");
+    String[] userInputArray = userInput.toLowerCase().split("");
 
-    /*String[] userInputArray = staticUserInput.split("");
+      for (String character: userInputArray) {
+        boolean isVowel = (character.equals("a")) || (character.equals("e")) ||
+                (character.equals("i")) || (character.equals("o")) ||
+                (character.equals("u"));
+        if (isVowel) {
+          System.out.println("-");
+        } else System.out.println(character);
+      }
 
-    HashMap <String, String> vowels = new HashMap <String, String>();
-      vowels.put("a", "-");
-      vowels.put("e", "-");
-      vowels.put("i", "-");
-      vowels.put("o", "-");
-      vowels.put("u", "-");
-
-    for (String letter : userInputArray) {
-      String encryptedLetters = vowels.get(letter);
-      //String[] encryptedUserInputArray = userInputArray(vowels.get(letter));
-      System.out.println(encryptedLetters);
-    }*/
-
-/*
-x User inputs a String
-x App separates that String into a String[]
-x Looks for vowels
-x Replaces vowels with -
-??? Returns new string
-
-*/
-    return encryptedUserInput;
+    return output;
   }
 
 }

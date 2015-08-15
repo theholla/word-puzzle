@@ -29,7 +29,7 @@ Behavior                                 Input           Output
 Replaces vowels in a string wth -        apple           -ppl-
 Understands upper/lowercase              Apple           -ppl-
 Leaves spaces as is                      the dog         th- d-g
-Handles non alpha characters             fsho!!#!        fsh-!!#!
+Handles non alpha characters             build-out?       b--ld---t?
 Responds to blank entries                                Please type a sentence
 
 */
