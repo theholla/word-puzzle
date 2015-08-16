@@ -17,7 +17,7 @@ public class IntegratedTests extends FluentTest {
   @Test
   public void rootTest() {
     goTo("http://localhost:4567/");
-    assertThat(pageSource()).contains("Please type a sentence to be");
+    assertThat(pageSource()).contains("What shall we");
   }
 
   @Test

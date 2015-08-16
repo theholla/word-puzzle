@@ -43,18 +43,21 @@ public class WordPuzzle {
 
   public static String makeWordPuzzle(String userInput){
 
-    String[] userInputArray = userInput.toLowerCase().split("");
+    String[] userInputArray = userInput.split("");
+    String tree = "";
 
-      for (String character: userInputArray) {
-        boolean isVowel = (character.equals("a")) || (character.equals("e")) ||
-                (character.equals("i")) || (character.equals("o")) ||
-                (character.equals("u"));
-        if (isVowel) {
-          System.out.println("-");
-        } else System.out.println(character);
+    for (String character: userInputArray) {
+      boolean isVowel = (character.equalsIgnoreCase("a")) || (character.equalsIgnoreCase("e")) ||
+              (character.equalsIgnoreCase("i")) || (character.equalsIgnoreCase("o")) ||
+              (character.equalsIgnoreCase("u"));
+      if (isVowel) {
+        tree += "-";
+      } else {
+        tree += character;
       }
+    }
 
-    return output;
+    return tree;
   }
 
 }
