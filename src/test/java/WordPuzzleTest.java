@@ -21,15 +21,18 @@ public class WordPuzzleTest {
     assertEquals(testResult, testWordPuzzle.makeWordPuzzle("Apple"));
   }
 
+  @Test
+  public void wordPuzzle_ReplaceAllVowels_FineWithSpaces() {
+    WordPuzzle testWordPuzzle = new WordPuzzle();
+    String testResult = "th- d-g";
+    assertEquals(testResult, testWordPuzzle.makeWordPuzzle("the dog"));
+  }
+
+  @Test
+  public void wordPuzzle_ReplaceAllVowels_UnderstandsNonAlphas() {
+    WordPuzzle testWordPuzzle = new WordPuzzle();
+    String testResult = "b--ld---t?";
+    assertEquals(testResult, testWordPuzzle.makeWordPuzzle("build-out?"));
+  }
+
 }
-
-/*
-Behavior                                 Input           Output
-
-Replaces vowels in a string wth -        apple           -ppl-
-Understands upper/lowercase              Apple           -ppl-
-Leaves spaces as is                      the dog         th- d-g
-Handles non alpha characters             build-out?       b--ld---t?
-Responds to blank entries                                Please type a sentence
-
-*/
