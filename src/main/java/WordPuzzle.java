@@ -42,22 +42,13 @@ public class WordPuzzle {
   }
 
   public static String makeWordPuzzle(String userInput){
-
-    String[] userInputArray = userInput.split("");
-    String tree = "";
-
-    for (String character: userInputArray) {
-      boolean isVowel = (character.equalsIgnoreCase("a")) || (character.equalsIgnoreCase("e")) ||
-              (character.equalsIgnoreCase("i")) || (character.equalsIgnoreCase("o")) ||
-              (character.equalsIgnoreCase("u"));
-      if (isVowel) {
-        tree += "-";
-      } else {
-        tree += character;
-      }
+    String[] vowels = {"a", "e", "i", "o", "u", "A", "E", "I", "O", "U"};
+    for (String letter : vowels) {
+      userInput = userInput.replaceAll(letter, "-");
     }
 
-    return tree;
+    return userInput;
+
   }
 
 }
